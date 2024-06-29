@@ -7,9 +7,10 @@ import User from './models/userModel.js'
 import Order from './models/orderModel.js'
 import connectDB from './config/db.js'
 dotenv.config()
-connectDB()
+// connectDB()
 const importData=async()=>{
     try{
+        await connectDB()
         await Order.deleteMany()
         await Product.deleteMany()
         await User.deleteMany()
@@ -28,6 +29,7 @@ const importData=async()=>{
 }
 const destroyData=async()=>{
     try{
+        await connectDB()
         await Order.deleteMany()
         await Product.deleteMany()
         await User.deleteMany()

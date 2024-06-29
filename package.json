@@ -10,6 +10,7 @@
   "license": "ISC",
   "description": "",
   "dependencies": {
+    "concurrent": "^0.3.2",
     "concurrently": "^8.2.2"
   }
 }
